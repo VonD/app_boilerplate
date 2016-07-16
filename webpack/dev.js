@@ -5,10 +5,10 @@ var path = require('path');
 
 module.exports = {
 	devtool: 'source-map',
-	entry: ['babel-polyfill', './src/app'],
+	entry: ['babel-polyfill', './src/client'],
 	output: {
 		path: path.resolve(__dirname, '../dist/assets/'),
-		filename: 'app.js',
+		filename: 'client.js',
 		publicPath: 'http://localhost:8080/assets/'
 	},
 	plugins: [

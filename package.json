@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base src/ --config webpack/dev.js --hot --inline",
+    "dev-server": "babel-node --presets stage-0,es2015,react src/server.js",
     "build": "webpack --config webpack/prod.js"
   },
   "author": "Paul Vonderscher",
@@ -26,7 +27,9 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
+    "express": "^4.14.0",
     "immutable": "^3.8.1",
+    "node-fetch": "^1.5.3",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",

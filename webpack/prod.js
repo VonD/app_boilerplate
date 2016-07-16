@@ -5,10 +5,10 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	entry: ['babel-polyfill', './src/app'],
+	entry: ['babel-polyfill', './src/client'],
 	output: {
 		path: path.resolve(__dirname, '../dist/assets/'),
-		filename: 'app.js',
+		filename: 'client.js',
 		publicPath: '/assets/'
 	},
 	plugins: [
@@ -21,7 +21,7 @@ module.exports = {
 		new webpack.optimize.UglifyJsPlugin({
 			compress: { warnings: false }
 		}),
-		new ExtractTextPlugin('app.css')
+		new ExtractTextPlugin('client.css')
 	],
 	resolve: {
 		extensions: ['', '.js']
